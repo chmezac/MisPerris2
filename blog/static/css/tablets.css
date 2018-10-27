@@ -1,0 +1,438 @@
+
+/* IPAD*/
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    
+    .logo{
+        position: absolute;
+        padding-left: 290px;
+        top: 1px;
+    }
+
+    .icon-bars {
+        position: relative;
+        right: 700px;
+    }
+
+    .menu__link {
+        display: block;
+        padding: 10px;
+        background: #002e2e;
+        text-decoration: none;
+        color:#002e2e;
+   
+        border-bottom-style: groove;
+        border-top-style: groove;
+
+        margin-left: 1px;
+   }
+
+    
+    .galeria{
+        width: 100%;
+        display: inline-block;
+        border-color: rgb(234, 255, 251);
+        border-style: dashed;
+        background-image: url("https://goo.gl/SbNmXr");
+        border-radius: 5%;
+
+        background-size: 10%;
+
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 40;
+    }
+
+
+    .textos{
+        width: 100%;
+        margin: 25px auto;
+    
+        border-color: rgb(255, 255, 255);
+        border-radius: 5%;
+    
+        background-image: url("https://goo.gl/SbNmXr");
+        background-size: 20%;
+    
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 40;
+    }
+    
+
+    .textos2{
+
+        width: 100%;
+        margin: 25px auto;
+    
+        border-color: rgb(255, 255, 255);
+        border-radius: 5%;
+    
+        background-image: url("https://goo.gl/SbNmXr");
+        background-size: 20%;
+    
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 35;
+    }
+
+
+    
+    .galeria p{
+        font-size: 18px;
+        color: white;
+        padding-top: 15px;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 50px;
+        margin: 10px;
+        width: 330px;
+    }
+
+    .perro1{
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 435px;  
+
+    } 
+    
+    .perro2{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 435px;  
+
+    }
+    
+    
+    .perro3{
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 435px;  
+
+    }
+    
+    
+    .perro4{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 435px;    
+    }
+    
+    .perro5{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 435px;  
+    } 
+    
+    .perro6 {
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 435px;  
+    }
+
+
+    .perro1 img, .perro2 img, .perro3 img, .perro4 img, .perro5 img, .perro6 img{
+
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 5px;
+        margin: 10px;
+        width: 300px;
+    }
+
+}
+
+
+
+/* IPAD PRO*/
+@media only screen and (min-width:1024px) and (max-width:1366px) {
+
+    .galeria{
+        width: 100%;
+        display: inline-block;
+        border-color: rgb(234, 255, 251);
+        border-style: dashed;
+        background-image: url("https://goo.gl/SbNmXr");
+        border-radius: 5%;
+
+        background-size: 10%;
+
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 40;
+    }
+
+
+    .textos{
+        width: 100%;
+        margin: 25px auto;
+    
+        border-color: rgb(255, 255, 255);
+        border-radius: 5%;
+    
+        background-image: url("https://goo.gl/SbNmXr");
+        background-size: 20%;
+    
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 40;
+    }
+    
+
+    .textos2{
+
+        width: 100%;
+        margin: 25px auto;
+    
+        border-color: rgb(255, 255, 255);
+        border-radius: 5%;
+    
+        background-image: url("https://goo.gl/SbNmXr");
+        background-size: 20%;
+    
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 35;
+    }
+
+
+    
+    .galeria p{
+        font-size: 18px;
+        color: white;
+        padding-top: 15px;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 50px;
+        margin: 10px;
+        width: 400px;
+    }
+
+    .perro1{
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 530px;
+
+    } 
+    
+    .perro2{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 530px; 
+
+    }
+    
+    
+    .perro3{
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 530px; 
+
+    }
+    
+    
+    .perro4{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 530px;  
+    }
+    
+    .perro5{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 530px;
+    } 
+    
+    .perro6 {
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 530px;  
+    }
+
+
+    .perro1 img, .perro2 img, .perro3 img, .perro4 img, .perro5 img, .perro6 img{
+
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 5px;
+        margin: 10px;
+        width: 200px;
+    }
+}
+
+
+
+/*PC*/
+@media only screen and (min-width:900px){
+
+    .galeria{
+        width: 100%;
+        display: inline-block;
+        border-color: rgb(234, 255, 251);
+        border-style: dashed;
+        background-image: url("https://goo.gl/SbNmXr");
+        border-radius: 5%;
+
+        background-size: 10%;
+
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 40;
+    }
+
+
+    .textos{
+        width: 100%;
+        margin: 25px auto;
+    
+        border-color: rgb(255, 255, 255);
+        border-radius: 5%;
+    
+        background-image: url("https://goo.gl/SbNmXr");
+        background-size: 20%;
+    
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 40;
+    }
+    
+
+    .textos2{
+
+        width: 100%;
+        margin: 25px auto;
+    
+        border-color: rgb(255, 255, 255);
+        border-radius: 5%;
+    
+        background-image: url("https://goo.gl/SbNmXr");
+        background-size: 20%;
+    
+        border: 40px solid;
+        border-image-source: url("https://goo.gl/R47mGA");
+        border-image-slice: 35;
+    }
+
+
+    
+    .galeria p{
+        font-size: 20px;
+        color: white;
+        padding-top: 15px;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 50px;
+        margin: 10px;
+        width: 500px;
+    }
+
+    .perro1{
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 640px; 
+
+    } 
+    
+    .perro2{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 640px; 
+
+    }
+    
+    
+    .perro3{
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 640px; 
+
+    }
+    
+    
+    .perro4{
+        margin: 13px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 640px; 
+    }
+    
+    .perro5{
+        margin: 20px;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 640px; 
+    } 
+    
+    .perro6 {
+        margin: 0;
+        padding: 0;
+        padding-right: 120px;
+        margin-top: 40px;
+        width: 48%;
+        height: 640px;  
+    }
+
+
+    .perro1 img, .perro2 img, .perro3 img, .perro4 img, .perro5 img, .perro6 img{
+
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 5px;
+        margin: 10px;
+        width: 590px;
+    }
+}
+
+
+
+
+
+

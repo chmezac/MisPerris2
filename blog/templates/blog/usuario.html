@@ -1,0 +1,233 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{%  static 'logo1.png' %}">
+
+    <title>INICIO - Mis Perris</title>
+    
+    {% block css %}
+    <!-- Planillas CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/movil.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tablets.css' %}" rel="stylesheet">
+    
+
+    <!-- Carrusel -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% endblock %}
+</head>
+
+
+<body>
+        <div class="logo">
+                <img src="images/logo2.png" alt="Logo Mis Perris" class="LogoMP">
+            </div>
+            
+            
+            <!--MENU-->
+            <header class="header">
+              <div class="contenedor">
+                  <span class="icon-bars" id="btn-menu"></span>
+                  <nav class="nav" id="nav">
+                   <ul class="menu">
+                       <li><a class="menu__link" href="index.html">&#127968; Inicio</a></li>
+                       <li><a class="menu__link" href="usuario.html">&#128100; Unirme</a></li>
+                       <li><a class="menu__link" href="formulario.html">&#128054; Registrar Un Perro</a></li>
+                       <li><a class="menu__link" href="#">&#9993; Contacto</a></li>
+                   </ul>   
+                  </nav>
+              </div>
+            </header>
+            <!--MENU-->
+    
+
+
+    <section class="cartel">
+            <h3><b>ÚNETE A MIS PERRIS</b></h3> 
+    </section>
+       
+<form onSubmit="validate()" action="#">
+        <section class="grupo2" >
+                <h2><b>DATOS PERSONALES</b></h2> 
+                <br>
+               
+        
+                <label for="txtRut">Rut :</label>
+                <input id="txtRut"  maxlength="10"
+                minlength="9" type="text"
+                onkeyup="modifyText()" placeholder="Ingrese Rut" required>  
+                <br>
+    
+                <br>     
+                <label for="txtName">Nombre:</label>
+                <input type="text" onkeypress="return soloLetras(event)" id="txtName" 
+                placeholder="Nombre Completo" required>
+                <span id="nameValidator" ></span>
+                <br>
+        
+                <br>     
+                <label for="frmEmailA">Email :</label>
+                <input type="email" name="email" id="frmEmailA"
+                placeholder="name@example.com" required autocomplete="email">
+                <br>
+    
+                <br> 
+                <label for="frmDate">Fecha Nacimiento :</label>
+                <input type="date" name="date" id="frmDate"  max="2001-01-01" required>
+               
+               
+               
+                    
+        </section>
+    <section class="grupo1">
+            <h2><b>UBICACIÓN</b></h2> 
+            <br>
+            <label for="frmPhoneNumA">Telefono :</label>
+            <input type="number" name="phone" id="frmPhoneNumA"
+            placeholder="+569 99999999" required>
+            <br>
+
+            <br> 
+            <label for="frmtpregion">Region :</label>
+            <input type="text" name="tipo-region" id="frmtpregion" list="regionType" required>
+            <datalist id="regionType">
+            <option value="Región de Arica y Parinacota">
+            <option value="Región de Tarapacá">
+            <option value="Región de Antofagasta">
+            <option value="Región de Atacama">
+            <option value="Región de Coquimbo">
+            <option value="Región de Valparaíso">
+            <option value="Región de Metropolitana de Santiago">
+            <option value="Región de del Libertador General Bernardo O'Higgins">
+            <option value="Región de del Maule">
+            <option value="Región de del Biobío">
+            <option value="Región de de La Araucanía">
+            <option value="Región de de Los Ríos">
+            <option value="Región de de Los Lagos">
+            <option value="Región de de Aysén ">
+            <option value="Región de de Magallanes y de la Antártica Chilena">
+            </datalist>
+            <br>  
+
+            <br> <label for="frmtpcomuna">Comuna :</label>
+            <input type="text" name="tipo-comuna" id="frmtpcomuna" list="comunaType" required>
+            <datalist id="comunaType">
+            <option value="Alhué"></option>
+            <option value="Buin"></option>
+            <option value="Calera de Tango"></option>
+            <option value="Cerrillos"></option>
+            <option value="Cerro Navia"></option>
+            <option value="Colina"></option>
+            <option value="Conchali"></option>
+            <option value="Curacaví"></option>
+            <option value="El Bosque"></option>
+            <option value="El Monte"></option>
+            <option value="Estación Central"></option>
+            <option value="Huechuraba"></option>
+            <option value="Independencia"></option>
+            <option value="Isla de Maipo"></option>
+            <option value="La Cisterna"></option>
+            <option value="La Florida"></option>
+            <option value="La Granja"></option>
+            <option value="La Pintana"></option>
+            <option value="La Reina"></option>
+            <option value="Lampa"></option>
+            <option value="Las Condes"></option>
+            <option value="Lo Barnechea"></option>
+            <option value="Lo Espejo"></option>
+            <option value="Lo Prado"></option>
+            <option value="Macul"></option>
+            <option value="Maipu"></option>
+            <option value="Maria Pinto"></option>
+            <option value="Melipilla"></option>
+            <option value="Ñuñoa"></option>
+            <option value="Padre Hurtado"></option>
+            <option value="Paine"></option>
+            <option value="Pedro Aguirre Cerda"></option>
+            <option value="Penaflor"></option>
+            <option value="Peñalolen"></option>
+            <option value="Pirque"></option>
+            <option value="Providencia"></option>
+            <option value="Pudahuel"></option>
+            <option value="Puente Alto"></option>
+            <option value="Quilicura"></option>
+            <option value="Quinta Normal"></option>
+            <option value="Recoleta"></option>
+            <option value="Renca"></option>
+            <option value="San Bernardo"></option>
+            <option value="San Joaquin"></option>
+            <option value="San Jose de Maipo"></option>
+            <option value="San Miguel"></option>
+            <option value="San Pedro"></option>
+            <option value="San Ramón"></option>
+            <option value="Santiago"></option>
+            <option value="Talagante"></option>
+            <option value="Tiltil"></option>
+            <option value="Vitacura"></option>
+        
+        </datalist>
+            <br>
+
+            <br> 
+            <label for="frmtpvivienda">Tipo de vivienda:</label>
+            <input type="text" name="tipo-vivienda" id="frmtpvivienda" list="viviendaType" required>
+            <datalist id="viviendaType">
+            <option value="Casa con patio grande">
+            <option value="Casa con patio pequeño">
+            <option value="Casa sin patio">
+            <option value="Departamento">
+            </datalist>
+    </section>
+          
+
+
+    <section class="aceptar">
+            <h3> <button type="submit">Enviar Formulario</button></h3>
+    </section>
+
+
+    
+</form>
+
+<footer>
+    <table>
+        <tr>
+                <td> Correo electrónico:</td>
+                    <td> 
+                        <a href="mailto:contacto@misperris.cl">contacto@misperris.cl</a>
+                    </td>
+        </tr>
+
+
+        <tr>
+                <td> Teléfono de contacto:</td>
+                <td> 
+                    <a href="tel:+56981488490">+56 9 8 148 84 90</a>
+                </td>
+        </tr>
+
+
+        <tr>
+                <td colspan="2">
+                  <br>
+                   <b>MIS PERRIS 2018 - &copy; Todos los derechos reservados</b> 
+                </td>  
+        </tr>
+    </table>
+</footer>
+   
+<script src="javascript/main.js"></script>
+</body>
+ 
+
+</html>
+

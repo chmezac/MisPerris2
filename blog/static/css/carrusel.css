@@ -1,0 +1,71 @@
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-width: 100%;
+      margin: 0;    
+
+}
+  
+.container{
+      position:relative;
+      z-index:1;
+}
+
+
+.carousel-inner img{
+      width: 100%;
+
+}
+
+
+.carousel-inner{
+      max-width: 100%;
+      margin: 0;
+      border-style: dashed;
+      border-color: rgb(234, 255, 251);
+
+
+}
+
+.carousel-caption{
+     background-color: rgba(0, 0, 0, 0.753);
+     border-top-left-radius: 25px;
+     border-top-right-radius: 25px;
+
+     margin:0;
+     margin-bottom: -20px;
+     font-size: 18px;
+}
+
+.carousel-indicators{
+      margin:0;
+      margin-bottom: -10px;
+}
+
+
+/*IPHONE 5*/
+@media only screen and (min-width:320px) and (max-width:568px) {
+    .carousel-caption{
+         background-color: rgba(0, 0, 0, 0.63);
+         margin:0;
+         margin-bottom: -20px;
+         font-size: 3px;
+
+         z-index:1;
+      }
+    
+
+    .carousel-caption p{
+         margin:0;
+         font-size: 0px;
+
+         z-index:1;
+      }
+
+.carousel-caption h3{
+         margin:0;
+         font-size: 18px;
+
+         z-index:1;
+      }
+
+  }

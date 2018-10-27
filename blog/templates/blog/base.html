@@ -1,0 +1,270 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{%  static 'logo1.png' %}">
+
+    <title>INICIO - Mis Perris</title>
+
+    {% block css %}
+        <!-- Planillas CSS -->
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+        <link href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+        <link href="{% static 'css/movil.css' %}" rel="stylesheet">
+        <link href="{% static 'css/tablets.css' %}" rel="stylesheet">
+        
+
+        <!-- Carrusel -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    {% endblock %}
+</head>
+
+
+<body>
+        <div class="logo">
+             <img class="LogoMP" src="{% static 'img/logo2.png' %}" alt="Logo Mis Perris">
+        </div>
+        
+        
+        <!--MENU-->
+        <header class="header">
+          <div class="contenedor">
+              <span class="icon-bars" id="btn-menu"></span>
+              <nav class="nav" id="nav">
+               <ul class="menu">
+                   <li><a class="menu__link" href="base.html">&#127968; Inicio</a></li>
+                   <li><a class="menu__link" href="usuario.html">&#128100; Unirme</a></li>
+                   <li><a class="menu__link" href="formulario.html">&#128054; Registrar Un Perro</a></li>
+                   <li><a class="menu__link" href="#">&#9993; Contacto</a></li>
+               </ul>   
+              </nav>
+          </div>
+        </header>
+        <!--MENU-->
+
+        
+        
+        <!--CARRUSEL-->
+        <div class="container">
+          <br>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+        
+              <div class="item active">
+                <img class="img-responsive" src="{% static 'img/familia1.jpg' %}" alt="BIENVENIDO">
+                <div class="carousel-caption">
+                  <h3>BIENVENIDO</h3>
+                  <p>Te damos la bienvenida a ésta causa: el rescate y rehabilitación de éstos perros.</p>
+                </div>
+              </div>
+        
+              <div class="item">
+                <img class="img-responsive" src="{% static 'img/familia2.jpg' %}" alt="FAMILIA GALLARDO">
+                <div class="carousel-caption">
+                  <h3>FAMILIA GALLARDO: "MEJOR QUE NUNCA"</h3>
+                  <p>"Rescatamos a Loki porque se notaba que necesitaba amor, asi que no lo pensamos dos veces para adoptarlo."</p>
+                </div>
+              </div>
+            
+              <div class="item">
+                <img class="img-responsive" src="{% static 'img/familia3.jpg' %}" alt="FAMILIA DURÁN">
+                <div class="carousel-caption">
+                  <h3>FAMILIA DURÁN: "OTRO HIJO EN LA FAMILIA"</h3>
+                  <p>"Atom lleva con nosotros 2 años y nuestro hijo lo adora, es su mejor amigo."</p>
+                </div>
+              </div>
+        
+              <div class="item">
+                <img class="img-responsive" src="{% static 'img/familia4.jpg' %}" alt="FAMILIA MUÑOZ">
+                <div class="carousel-caption">
+                  <h3>FAMILIA MUÑOZ: "ES NUESTRO REGALÓN"</h3>
+                  <p>"Cuando vimos a Lucas, supimos que era nuestro perro. Es el guardían de la casa."</p>
+                </div>
+              </div>
+          
+            </div>
+        
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <!--CARRUSEL-->
+        
+        
+        <br>
+        <section class="textos">
+          <h3><b>Financiamiento</b></h3> 
+          <p>Sigue nuestras redes sociales para informarte de todo acerca de las diversas campañas, actividades y notificaciones que realizamos para obtener financiamiento para seguir ayudando. Tu aporte voluntario es importante para ésta causa.</p>
+        </section>
+        
+        <section class="textos2" >
+          <h3><b>Misión</b></h3> 
+          <p>Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos y los preparamos para buscarles un hogar. Ayudanos a seguir con esta tarea, ya que ellos nos necesitan. Únete a nosotros para ser parte de ésta comunidad y causa, hazlo por ellos.</p>
+        </section>
+        
+        
+        
+        
+        
+        <section class="galeria">
+          <h3><b>NUESTROS PERROS</b></h3> 
+        
+        <div class="perro1">
+        <img class="img-responsive" src="{% static 'img/galeria1.jpg' %}" alt="1">
+        <p><b>NOMBRE:</b> Rex </p>
+        <p><b>DESCRIPCIÓN:</b> Rex es uno de los últimos en llegar y se ha podido adaptar fácilmente a la fundación.</p>
+        </div>
+        
+        
+        <div class="perro2">
+            <img class="img-responsive" src="{% static 'img/galeria2.jpg' %}" alt="2">
+          <p><b>NOMBRE:</b> Ringo </p>
+          <p><b>DESCRIPCIÓN:</b> Es muy cariñoso y hambriento, es uno de los más tranquilos. </p>
+          </div>
+        
+        <div class="perro3">
+        <img class="img-responsive" src="{% static 'img/galeria3.jpg' %}" alt="3">
+        <p><b>NOMBRE:</b> Toto </p>
+        <p><b>DESCRIPCIÓN:</b> A parte de tener una energía infinita, sabe cuando portarse bien. </p>
+        </div>
+        
+        
+        <div class="perro4">
+        <img class="img-responsive" src="{% static 'img/galeria4.jpg' %}" alt="4">
+        <p><b>NOMBRE:</b> Cholo </p>
+        <p><b>DESCRIPCIÓN:</b> Es uno de los mayores de la fundación, es también un buen guardián.</p>
+        </div>
+        
+        
+        <div class="perro5">
+        <img class="img-responsive" src="{% static 'img/galeria5.jpg' %}" alt="5">
+        <p><b>NOMBRE:</b> Betsy </p>
+        <p><b>DESCRIPCIÓN:</b> Betsy es un poco revoltosa, pero aún asi es obediente a su corta edad.</p>
+        </div>
+        
+        
+        <div class="perro6">
+        <img class="img-responsive" src="{% static 'img/galeria6.jpg' %}" alt="6">
+        <p><b>NOMBRE:</b> Charlie </p>
+        <p><b>DESCRIPCIÓN:</b> Es uno de los más cariñosos que tenemos y fieles. Al principio era muy peleador pero ahora cambió completamente.</p>
+        </div>
+        </section>
+        
+        
+        
+        <footer>
+            <table>
+                <tr>
+                        <td> Correo electrónico:</td>
+                            <td> 
+                                <a href="mailto:contacto@misperris.cl">contacto@misperris.cl</a>
+                            </td>
+                </tr>
+        
+        
+                <tr>
+                        <td> Teléfono de contacto:</td>
+                        <td> 
+                            <a href="tel:+56981488490">+56 9 8 148 84 90</a>
+                        </td>
+                </tr>
+        
+        
+                <tr>
+                        <td colspan="2">
+                          <br>
+                           <b>MIS PERRIS 2018 - &copy; Todos los derechos reservados</b> 
+                        </td>  
+                </tr>
+            </table>
+        </footer>
+
+
+        {% block js %}
+            <!-- JavaScript -->
+            <script src="{% static 'js/main.js' %}"></script>
+        {% endblock %}
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+-->

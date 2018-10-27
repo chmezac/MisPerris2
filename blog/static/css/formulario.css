@@ -1,0 +1,274 @@
+body{
+    width: 100%;
+    border:0;
+    text-align: justify;
+    font-size: 18px;
+    background-color: #e0e5f0;
+    background-image: url("https://goo.gl/2hhAHW"); 
+}
+
+
+
+.contenedor{
+    width: 100%;   
+    position: relative;
+
+    z-index: 2;
+}
+
+.header{
+    height: 60px;
+
+    height:50px;
+    background-color:#003333da;
+    background-image: url("https://goo.gl/GGVvVE")
+}
+
+
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;   
+}
+
+
+.logo, .icon-bars{
+    margin: 5px;
+}
+
+
+.icon-bars {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    right: 310px;
+    font-size: 30px;
+    background: #016d6d;
+    color: aliceblue;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    border-style: outset;
+    border-color: aliceblue;
+}
+
+
+.logo{
+    position: absolute;
+    top:-1500px;
+    width: 50px;
+}
+
+
+.nav{
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    width: 100%; 
+    transition: all 0.3s;
+}
+ 
+
+.menu{
+     list-style: none;
+     padding: 0;
+     margin: 0;    
+}
+
+
+
+.menu a{
+    color:white;
+    font-size: 18px;
+}
+
+
+.menu__link {
+     display: block;
+     padding: 10px;
+     background: #002e2e;
+     text-decoration: none;
+     color:#002e2e; 
+     
+     margin-left: 160px;
+
+}
+
+
+.menu__link:hover, .select{
+     background: #ffffff;
+     color: rgb(0, 0, 0);
+}
+
+
+.mostrar {
+     left: 0;
+}
+
+
+/*AQUI VA DESHABILITA OFFCANVAS EN PC*/
+@media(min-width:1024px){
+    .contenedor{
+        width: 1500px;
+    }    
+    .nav {
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+    }
+    .icon-bars {
+        display: none;
+    }
+    .menu__link{
+        background: none;
+    }
+    .select{
+        background: white;
+    }
+    .info__titulo{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    }
+    
+    @media(min-width:1280px){
+        .contenedor{
+            width: 1200px;
+        }
+    }
+
+
+
+::placeholder{
+    color: rgb(46, 46, 46);
+}
+
+
+.grupo2{
+    float: center;
+    width: 55%;
+    height: 600px;
+    margin: 40px auto;
+
+    border-color: rgb(255, 255, 255);
+
+    background-image: url("https://goo.gl/SbNmXr");
+    background-size: 20%;
+
+    border: 75px solid;
+    border-image-source: url("https://goo.gl/R47mGA");
+    border-image-slice: 40;
+    border-radius: 8%;
+
+    text-align: center;
+}
+
+
+.grupo2{
+    font-size: 20px;
+}
+
+
+.grupo2 label, .grupo2 h2{
+    color: white;
+}
+
+
+.cartel{
+    display: inline-block;
+    width: 100%;
+    border-color: rgb(234, 255, 251);
+    border-style: dashed;
+    background-image: url("https://goo.gl/SbNmXr");
+    border-radius: 5%;
+
+    background-size: 10%;
+
+    margin: 15px auto;
+}
+
+
+.cartel h3{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.aceptar{
+    display: inline-block;
+    width: 50%;
+    height: 120px;
+    border-color: rgb(234, 255, 251);
+    border-style: dashed;
+    background-image: url("https://goo.gl/SbNmXr");
+    border-radius: 5%;
+
+    background-size: 10%;
+
+    padding: 20px;
+
+
+    position: relative;
+    left:25%;
+}
+
+
+.aceptar button{
+    float:none;
+    text-align:center;
+    position: absolute;
+    left: 33%;
+    min-height: 50px;
+    min-width: 250px;
+
+}
+
+
+
+label{
+    float: left;
+    }
+    
+input{
+    width: 350px;
+    
+    float:right;
+    text-align:left;
+}
+
+
+footer tr{
+
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+
+footer td{
+    padding-right: 20px;
+    font-size: 18px;
+}
+
+footer b{
+    margin-left: -50px;
+    font-size: 18px;
+}
+
+
+footer{
+    width: 100%;
+    background-color:#003333da;
+    margin-top: 30px;
+}
+
+
+footer p, footer table{
+    color: rgb(214, 214, 214);
+    font-size: 16px;    
+}
