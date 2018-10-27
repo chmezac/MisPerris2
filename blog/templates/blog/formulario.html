@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <title>REGISTRAR - Mis Perris</title>
+    
+            <!-- Planillas CSS -->
+            <link href="{% static 'css/formulario.css' %}" rel="stylesheet">
+            <link href="{% static 'css/f_movil.css' %}" rel="stylesheet">
+            <link href="{% static 'css/f_tablet.css' %}" rel="stylesheet">
+    
+       
+            <!-- Carrusel -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+            <link rel="stylesheet" href="formulario.html">
+   
+</head>
+
+
+<body>
+    
+    <div class="logo">
+        <img class="LogoMP" src="{% static 'img/logo2.png' %}" alt="Logo Mis Perris">
+   </div>
+            
+            
+            <!--MENU-->
+            <header class="header">
+              <div class="contenedor">
+                  <span class="icon-bars" id="btn-menu"></span>
+                  <nav class="nav" id="nav">
+                   <ul class="menu">
+                    <li><a class="menu__link" href="http://chmezac.pythonanywhere.com">&#127968; Inicio</a></li>
+                    <li><a class="menu__link" href="formulario.html">&#128054; Registrar Un Perro</a></li>
+                    <li><a class="menu__link" href="usuario.html">&#128100; Unirme</a></li>
+                    <li><a class="menu__link" href="/admin/">&#128273;Entrar</a></li>
+                   </ul>   
+                  </nav>
+              </div>
+            </header>
+            <!--MENU-->
+    
+
+
+    <section class="cartel">
+            <h3><b>ÚNETE A MIS PERRIS</b></h3> 
+    </section>
+       
+<form onSubmit="validate()" action="#">
+        <section class="grupo2" >
+                <h2><b>REGISTRO</b></h2> 
+            <div>
+                <label for="imagen">Imágen:</label>
+                <input name="archivo1" type="file" id="imagen" required><br/>
+            </div>
+            <br>
+    
+            <br>  
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required/>
+            </div>
+            <br>
+    
+            <br>  
+            <div>
+                <label for="Raza">Raza :</label>
+                <input type="text" id="Raza" required/>
+            </div>
+            <br>
+    
+                <br>  
+            <div>
+                <label for="Descripcion">Descripcion:</label>
+                <input type="text" id="Descripcion" required/>
+            </div>
+            <br>
+    
+            <br>  
+            <div>
+
+                <br> 
+                <label for="frmtpestado">Estado</label>
+                <input type="text" name="tipo-Estado" id="frmtpestado" list="estadoType" required>
+                <datalist id="estadoType">
+                <option value="Rescatado">
+                <option value="Disponible">
+                <option value="Adoptado">
+                </datalist>
+            </div>      
+             </section>
+
+             <section class="aceptar">
+                    <h3> <button type="submit">Registrar</button></h3>
+            </section>
+</form>
+
+
+<footer>
+        <table>
+            <tr>
+                    <td> Correo electrónico:</td>
+                        <td> 
+                            <a href="mailto:contacto@misperris.cl">contacto@misperris.cl</a>
+                        </td>
+            </tr>
+    
+    
+            <tr>
+                    <td> Teléfono de contacto:</td>
+                    <td> 
+                        <a href="tel:+56981488490">+56 9 8 148 84 90</a>
+                    </td>
+            </tr>
+    
+    
+            <tr>
+                    <td colspan="2">
+                      <br>
+                       <b>MIS PERRIS 2018 - &copy; Todos los derechos reservados</b> 
+                    </td>  
+            </tr>
+        </table>
+    </footer>
+   
+
+<!-- JavaScript -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+

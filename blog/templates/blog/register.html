@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <form action="." method="POST">
+        <h2>Registro de Usuario</h2>
+        <h3>¿Olvidaste tu contraseña? Recupérala aqui <a href='http://chmezac.pythonanywhere.com/reset-password/'>aqui</a></h3>
+        <br>
+        <h4>Datos de la Cuenta</h4>
+        <div id="cajagrande">
+            <div class="caja">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <button role="button">Registrar Cuenta</button>
+            <h3>¿Olvidaste tu contraseña? Recupérala aqui <a href='http://chmezac.pythonanywhere.com/reset-password/'>aqui</a></h3>
+            <br>
+            </div>
+        </div>
+
+    </form>
+{% endblock %}

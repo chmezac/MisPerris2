@@ -1,14 +1,10 @@
-from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
-from django.shortcuts import render, get_object_or_404
+from .models import Post, Dog, AdoptionRegister
+from django.shortcuts import render, render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
-
-
-from django.template import loader, Context
-from blog.models import *
-from django.core import serializers
+from blog.forms import RegisterForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 def post_list(request):
@@ -45,3 +41,39 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})    
+    
+
+
+def misperris(request):
+    return render(request, 'blog/base.html', {})
+
+def form1(request):
+    return render(request, 'blog/formulario.html', {})
+
+def register_view(request):
+    form = RegisterForm()
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            usuario = form.cleaned_data['usuario']
+            nombre = form.cleaned_data['nombre']
+            apellido = form.cleaned_data['apellido']
+            email = form.cleaned_data['email']
+            password_one = form.cleaned_data['password_one']
+            password_two = form.cleaned_data['password_two']
+            u = User.objects.create_user(username=usuario,first_name=nombre,last_name=apellido, email=email, password=password_one, is_staff=True)
+            u.save()
+            return render(request, 'blog/welcome.html', {})
+        else:
+            ctx = {'form':form}
+            return render(request, 'blog/usuario.html', ctx)
+    ctx = {'form':form}
+    return render(request, 'blog/usuario.html', ctx)
+
+def loginview(request):
+    url = "http://chmezac.pythonanywhere.com/admin"
+    return redirect(url)
+
+def dog_list(request):
+    dogs= Dog.objects.filter(state="Disponible")
+    return render(request, 'blog/formulario.html', {'dogs': dogs})    
