@@ -1,10 +1,17 @@
+from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post, Dog, AdoptionRegister
-from django.shortcuts import render, render, get_object_or_404
-from .forms import PostForm
+from .models import Post, Dog, AdoptionRegister, Adoptante, Adoptado
+from .forms import PostForm, AdoptanteForm
 from django.shortcuts import redirect
+
 from blog.forms import RegisterForm
 from django.contrib.auth.models import User
+
+# PARA INICIO DE SESION
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
+
+
 
 # Create your views here.
 def post_list(request):
@@ -77,3 +84,42 @@ def loginview(request):
 def dog_list(request):
     dogs= Dog.objects.filter(state="Disponible")
     return render(request, 'blog/formulario.html', {'dogs': dogs})    
+
+
+
+
+def index(request):
+    #adoptantes = Adoptante.objects.filter(fechaNacimiento=timezone.now()).order_by('fechaNacimiento')
+    adoptantes = Adoptante.objects.order_by('run')
+    adoptados = Adoptado.objects.order_by('nombre')
+    return render(request, 'blog/index.html', {'adoptantes': adoptantes, 'adoptados': adoptados})
+
+
+@login_required
+def adopta(request):
+    if request.method == "POST":
+        form = AdoptanteForm(request.POST)
+        if form.is_valid():
+            Adoptante = form.save(commit=False)
+            Adoptante.save()
+            return redirect('index')
+    else:
+        form = AdoptanteForm()
+    return render(request, 'blog/usuario.html',{'form': form})    
+
+
+def formulario(request):
+    return render(request, 'blog/formulario.html', {})
+
+
+
+def password_change(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+    else:
+        ...
+
+

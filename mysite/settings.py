@@ -26,8 +26,7 @@ SECRET_KEY = '&t7%ux!5lj84t#1mgfl4*v6wj9m=e)9rwv13gn_l39qt0o1%gy'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', '.pythonanywhere.com'
-]
+    '127.0.0.1', '.pythonanywhere.com', 'chmezac.pythonanywhere.com']
 
 
 # Application definition
@@ -40,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'accounts.apps.AccountsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
@@ -122,4 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

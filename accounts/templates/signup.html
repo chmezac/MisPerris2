@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Mis perris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'img/logoPerris.png' %}">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+  </head>
+
+  <body>
+    <header>
+      <a href="{% url 'index' %}" tabindex="-1"><img id="logoPerris" src="{% static 'img/logoPerris.png' %}" alt="logo perris"/></a>
+      <h1>Mis perris</h1>
+    </header>
+
+    <main>
+      <div class="registro">
+        <h2>Sign up</h2>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    </main>
+
+  </body>
+</html>

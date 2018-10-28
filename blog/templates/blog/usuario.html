@@ -38,10 +38,10 @@
                   <span class="icon-bars" id="btn-menu"></span>
                   <nav class="nav" id="nav">
                    <ul class="menu">
-                        <li><a class="menu__link" href="http://chmezac.pythonanywhere.com">&#127968; Inicio</a></li>
-                        <li><a class="menu__link" href="formulario.html">&#128054; Registrar Un Perro</a></li>
-                        <li><a class="menu__link" href="usuario.html">&#128100; Unirme</a></li>
-                        <li><a class="menu__link" href="/admin/">&#128273;Entrar</a></li>
+                    <li><a class="menu__link" href="{% url 'index' %}" tabindex="1">&#127968; Inicio</a></li>
+                    <li><a class="menu__link" href="{% url 'formulario' %}" tabindex="2">&#128054; Registrar Un Perro</a></li>
+                    <li><a class="menu__link" href="{% url 'usuario' %}" tabindex="3">&#128100; Unirme</a></li>
+                    <li><a class="menu__link" href="/admin/">&#128273;Entrar</a></li>
                    </ul>   
                   </nav>
               </div>
