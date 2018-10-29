@@ -1,30 +1,96 @@
-<!DOCTYPE html>
 {% load static %}
-<html>
-  <head>
-    <title>Mis perris</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{% static 'img/logoPerris.png' %}">
-    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
-    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
-  </head>
 
-  <body>
-    <header>
-      <a href="{% url 'index' %}" tabindex="-1"><img id="logoPerris" src="{% static 'img/logoPerris.png' %}" alt="logo perris"/></a>
-      <h1>Mis perris</h1>
-    </header>
+<!DOCTYPE html>
+<html lang="es">
 
-    <main>
-      <div class="registro">
-        <h2>Sign up</h2>
-        <form method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">Sign up</button>
-        </form>
-      </div>
-    </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{%  static 'logo1.png' %}">
 
-  </body>
+    <title>INICIO - Mis Perris</title>
+
+        <!-- Planillas CSS -->
+        <link href="{% static 'css/login.css' %}" rel="stylesheet">
+        <link href="{% static 'css/login_m.css' %}" rel="stylesheet">
+
+        <!-- Carrusel -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="usuario.html">
+
+
+</head>
+
+
+<body>
+        <div class="logo">
+             <img class="LogoMP" src="{% static 'img/logo2.png' %}" alt="Logo Mis Perris">
+        </div>
+        
+        
+        <!--MENU-->
+        <header class="header">
+          <div class="contenedor">
+              <span class="icon-bars" id="btn-menu"></span>
+              <nav class="nav" id="nav">
+               <ul class="menu">
+                <li><a class="menu__link" href="{% url 'index' %}" tabindex="1">&#127968; Inicio</a></li>
+                <li><a class="menu__link" href="{% url 'formulario' %}" tabindex="2">&#128054; Registrar Un Perro</a></li>
+                <li><a class="menu__link" href="{% url 'usuario' %}" tabindex="3">&#128100; Unirme</a></li>
+                <li><a class="menu__link" href="/admin/">&#128273;Entrar</a></li>
+               </ul>   
+              </nav>
+          </div>
+        </header>
+        <!--MENU-->
+
+        
+        
+        <br>
+        <section class="textos">
+
+          {% if user.is_authenticated %}
+          <h3><b>¡BIENVENIDO!</b></h3> 
+          <p>Hola!,  <b><i>{{ user.username }}</i></b>. Gracias por volver a Mis Perris. <small><br>(<a href="{% url 'logout' %}">Salir</a>)</small></p>
+          {% endif %}
+
+        <br>
+        <br>
+          <div class="contenedorlogin">
+                <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                    <table style="margin: 0 auto;">
+                    <tr>
+                        <td id= username><br>{{ form.username.label_tag }}</td>  
+                    </tr>
+                    <td id="Cusuario">{{ form.username }}</td>
+
+                    <tr>
+                        <td id= pass><br>{{ form.password.label_tag }}</td>
+                    </tr>
+                    <td id= "Cpassword">{{ form.password }}</td>
+                    </table>
+          <br>
+                    <input id="btnLogin" type="submit" value="Login" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </form>
+                
+                <br>
+                <p id="olvidarContraseña"><a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a></p>
+                <p id="crearUsuario"> <a href="{% url 'signup' %}"> ¿Eres un nuevo usuario? Registrate aquí!</p>
+              </div>
+
+        </section>
+         
+
+        <!-- JavaScript -->
+        <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
 </html>
+
